@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CARS</title>
+</head>
+<body>
+<div>
+    <table border="1">
+        <tr>
+            <th>№</th>
+            <th>Мотор</th>
+            <th>Цвет</th>
+            <th>Лошадиные силы</th>
+        </tr>
+        <tr th:each="car : ${cars}">
+            <td th:text="${carStat.index}+1"></td>
+            <td th:text="${car.getMotor()}"></td>
+            <td th:text="${car.getColor()}"></td>
+            <td th:text="${car.getHorsepower()}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
